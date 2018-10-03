@@ -2,7 +2,7 @@
 
 import cors from 'cors';
 import express from 'express';
-// import router from './api/mongo_api.js';
+import router from './routes/api.js';
 // import badId from './middleware/badId.js';
 
 const app = express();
@@ -11,9 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
-// app.use(router);
+app.use(router);
 
-app.get('/',(req,res)=>{res.send('HELLO CHATBOT')})
 
 // app.use(badId);
 
